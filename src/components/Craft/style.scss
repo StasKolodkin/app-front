@@ -1,0 +1,220 @@
+@use "sass:math";
+
+$base: 1920;
+
+@function pxToVw($px) {
+  @return ($px / $base) * 100vw;
+}
+
+.Craft{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mainWindow{
+    width: pxToVw(1666);
+    height: pxToVw(1026);
+    padding: pxToVw(34) pxToVw(34) pxToVw(32) pxToVw(33);
+    box-sizing: border-box;
+    border: pxToVw(1) solid rgba(255, 255, 255, 0.05);
+    border-radius: pxToVw(20);
+    background: radial-gradient(290.63% 71.42% at 50% 51%,rgb(25, 27, 35),rgb(20, 22, 29) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: pxToVw(36);
+
+    .header{
+      width: pxToVw(1599);
+      height: pxToVw(80);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .leftPart{
+        height: 100%;
+        width: auto;
+        display: flex;
+        gap: pxToVw(62);
+        align-items: center;
+        justify-content: flex-start;
+
+        .headlineBlock{
+          height: 100%;
+          width: auto;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: pxToVw(26);
+
+          img{
+            height: pxToVw(80);
+            aspect-ratio: 1/1;
+          }
+
+          .titles{
+            height: pxToVw(63);
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .mainTitle{
+              height: pxToVw(36);
+              width: auto;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+
+              span{
+                color: rgb(255, 255, 255);
+                font-family: "Gilroy";
+                font-size: pxToVw(24);
+                font-weight: 700;
+              }
+            }
+
+            .subTitle{
+              height: pxToVw(27);
+              width: auto;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+
+              span{
+                color: rgb(68, 68, 85);
+                font-family: "Gilroy";
+                font-size: pxToVw(18);
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .switchButtonsBlock{
+          width: pxToVw(294);
+          height: pxToVw(53);
+          display: flex;
+          justify-content: space-between;
+
+          .switchButton{
+            width: pxToVw(141);
+            height: pxToVw(53);
+            box-sizing: border-box;
+            border: pxToVw(1) solid rgb(48, 131, 255);
+            border-radius: pxToVw(8);
+            background: rgba(48, 131, 255, 0.07);
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: pxToVw(23);
+            gap: pxToVw(5);
+            transition: background 0.2s ease;
+
+            &:hover{
+              border: pxToVw(1) solid rgba(255, 255, 255, 0.16);
+              background: rgb(48, 131, 255, 0.5);
+            }
+
+            &.active{
+              border: pxToVw(1) solid rgba(255, 255, 255, 0.16);
+              background: rgb(48, 131, 255);
+            }
+          }
+
+          .iconSwitchButton{
+            width: pxToVw(27);
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+              width: 100%;
+              aspect-ratio: 1/1;
+              user-select: none;
+            }
+          }
+
+          .textSwitchButton{
+            height: pxToVw(10);
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            span{
+              color: rgb(255, 255, 255);
+              font-family: "Gilroy";
+              font-size: pxToVw(14);
+              font-weight: 600;
+              user-select: none;
+            }
+          }
+        }
+
+        .balanceBlock{
+          height: pxToVw(29.25);
+          width: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: pxToVw(17);
+
+          .weightBalance, .materialsBalance{
+            height: pxToVw(29.25);
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: pxToVw(7.3);
+
+            img{
+              height: pxToVw(29.25);
+              aspect-ratio: 1/1;
+            }
+  
+            span{
+              color: rgb(255, 255, 255);
+              font-family: "Gilroy";
+              font-size: pxToVw(17);
+              font-weight: 600;
+            }
+          }
+        } 
+      }
+
+      .rightPart{
+        height: pxToVw(53);
+        width: pxToVw(134);
+        box-sizing: border-box;
+        border: pxToVw(1) solid rgba(43, 46, 58, 0.31);
+        border-radius: pxToVw(8);
+        background: rgba(29, 29, 38, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: pxToVw(12);
+
+        img{
+          width: pxToVw(15.75);
+          height: pxToVw(15.75);
+        }
+
+        span{
+          color: rgb(255, 255, 255);
+          font-family: "Gilroy";
+          font-size: pxToVw(16);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .body{
+      width: pxToVw(1599);
+      height: pxToVw(844);
+    }
+  }
+}
