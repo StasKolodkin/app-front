@@ -15,7 +15,7 @@
           <img :src="svg['iconSearch']">
         </div>
         <div class="strokeSearch">
-          <input v-model="searchQuery" type="text" placeholder="Поиск" style="width: 100%">
+          <input v-model="searchStore" type="text" placeholder="Поиск" style="width: 100%">
         </div>
       </div>
       <div class="listItems">

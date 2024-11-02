@@ -30,13 +30,13 @@ export default defineComponent({
       .filter(value => typeof value === 'string')
       .map(key => CategoryProperty[CategoryList[key as keyof typeof CategoryList]]);
 
-    const searchQuery = ref("")
+    const searchStore = ref("")
 
     return{
       CraftStore,
       getCategoryName,
       categories,
-      searchQuery
+      searchStore
     }
   }
 });

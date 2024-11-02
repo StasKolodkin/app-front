@@ -9,4 +9,189 @@ $base: 1920;
 .CraftHistory{
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: pxToVw(27);
+
+  .searchHistory{
+    width: 100%;
+    height: pxToVw(54);
+    border-radius: pxToVw(8);
+    background: rgb(16, 17, 22);
+    box-sizing: border-box;
+    padding: pxToVw(11) pxToVw(19);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: pxToVw(11);
+
+    .iconSearch{
+      height: pxToVw(20);
+      aspect-ratio: 1/1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      img{
+        height: pxToVw(15);
+        aspect-ratio: 1/1;
+      }
+    }
+
+    .strokeSearch{
+      height: pxToVw(15);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+
+      input{
+        all: unset;
+        font-size: pxToVw(16);
+        font-weight: 500;
+        font-family: "Gilroy";
+        color: rgb(255, 255, 255);
+        
+        &::placeholder{
+          color: rgb(44, 44, 58);
+        }
+      }
+    }
+  }
+
+  .rosterHistory{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: pxToVw(25);
+
+    .titleHistory{
+      height: pxToVw(17);
+      width: 100%;
+      display: flex;
+      padding: 0 pxToVw(15);
+      box-sizing: border-box;
+
+      .titleCell{
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        span{
+          color: rgb(79, 85, 103);
+          font-family: "Gilroy";
+          font-size: pxToVw(14);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .listHistory{
+      width: 100%;
+      height: pxToVw(711);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: pxToVw(2);
+
+      &::-webkit-scrollbar{
+        width: pxToVw(0);
+      }
+
+      .cellHistory{
+        height: pxToVw(72);
+        width: 100%;
+        border-radius: pxToVw(8);
+        background: rgba(29, 29, 38, 0.5);
+        padding: pxToVw(15);
+        box-sizing: border-box;
+        display: flex;
+
+        .cellPlayer{
+          width: 25%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: pxToVw(26);
+
+          .cellImage{
+            width: pxToVw(42);
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .cellName{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            span{
+              color: rgb(254, 254, 254);
+              font-family: "Gilroy";
+              font-size: pxToVw(16);
+              font-weight: 600;
+            }
+          }
+        }
+
+        .cellDate{
+          width: 25%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          span{
+            color: rgb(254, 254, 254);
+            font-family: "Gilroy";
+            font-size: pxToVw(16);
+            font-weight: 600;
+          }
+        }
+
+        .cellQuantity{
+          width: 25%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          span{
+            color: rgb(215, 68, 62);
+            font-family: "Gilroy";
+            font-size: pxToVw(16);
+            font-weight: 600;
+          }
+        }
+
+        .cellItems{
+          width: 25%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          span{
+            color: rgb(254, 254, 254);
+            font-family: "Gilroy";
+            font-size: pxToVw(16);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
 }

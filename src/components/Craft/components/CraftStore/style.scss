@@ -128,13 +128,19 @@ $base: 1920;
         width: pxToVw(284);
         height: pxToVw(221);
         box-sizing: border-box;
-        border: pxToVw(1) solid rgba(43, 46, 58, 0.31);
         border-radius: pxToVw(10);
+        border: 1px solid rgba(43, 46, 58, 0.31);
         background: rgba(29, 29, 38, 0.5);
         flex-direction: column;
         justify-content: space-between;
         padding: pxToVw(15);
         display: flex;
+        transition: background 0.2s ease, border 0.2s ease;
+
+        &:hover{
+          border: pxToVw(1) solid rgba(43, 46, 58, 0.55);
+          background: rgba(47, 47, 65, 0.5);
+        }
 
         .topCellItem{
           height: pxToVw(40);
@@ -203,9 +209,15 @@ $base: 1920;
             justify-content: center;
             gap: pxToVw(8);
             box-sizing: border-box;
-            border: pxToVw(1) solid rgba(255, 255, 255, 0.15);
+            border: pxToVw(1) solid rgba(255, 255, 255, 0.03);
             border-radius: pxToVw(4);
-            background: rgb(48, 131, 255);
+            background: rgb(39, 39, 49);
+            transition: background 0.2s ease, border 0.2s ease;
+
+            &:hover{
+              border: pxToVw(1) solid rgba(255, 255, 255, 0.15);
+              background: rgb(48, 131, 255);
+            }
 
             .iconCartBlock{
               width: pxToVw(20);

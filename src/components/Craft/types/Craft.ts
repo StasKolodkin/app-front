@@ -23,5 +23,6 @@ export type CraftHistory = {
   name: string
   date: string
   quantity: number
+  listItem: string[]
 }
 

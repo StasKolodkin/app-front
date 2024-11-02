@@ -24,7 +24,24 @@ const Craft: Module<Craft, unknown> = ({
       },
     ],
     craftHistory: [
-      
+      {
+        name: "Source Insensitive",
+        date: "20.02.2020, 12:00",
+        quantity: 702,
+        listItem: ["Assault Rifle MK2", "Revolver", "Sniper Rifle"]
+      },
+      {
+        name: "Stas",
+        date: "23.06.2024, 11:40",
+        quantity: 209,
+        listItem: ["Assault Rifle MK2", "Revolver"]
+      },
+      {
+        name: "EzeQel",
+        date: "03.10.2023, 21:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver"]
+      }
     ]
   },
   getters: {
