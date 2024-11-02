@@ -3,14 +3,14 @@ import { ImagesImages } from '../../../../tools/ImagesImages'
 import { useStore } from 'vuex'
 import { CategoryList, CategoryProperty } from '../../types/Category';
 import { Craft } from '../../types/Craft';
-import CartStore from './CartStore/CartStore.vue';
+import CraftCart from './CraftCart/CraftCart.vue';
 
 const svg = ImagesImages(require.context('../../assets/svg/', false, /\.(png|jpe?g|svg)$/));
 const images = ImagesImages(require.context('../../assets/images/', false, /\.(png|jpe?g|svg)$/));
 
 export default defineComponent({
   components: {
-    CartStore
+    CraftCart
   },
   data(){
     return{
@@ -32,11 +32,35 @@ export default defineComponent({
 
     const searchStore = ref("")
 
+    const selectedCategory = ref<CategoryList | null>(null);
+
+    const handleCategoryClick = (category: CategoryList) => {
+      if (selectedCategory.value === category) {
+        selectedCategory.value = null;
+      } else {
+        selectedCategory.value = category;
+      }
+    };
+
+    const filteredCraftStore = computed(() => {
+      const filteredByCategory = selectedCategory.value === null
+        ? CraftStore.value
+        : CraftStore.value.filter((item: any) => item.category === selectedCategory.value);
+      
+      return filteredByCategory.filter((item: any) => 
+        item.name.toLowerCase().includes(searchStore.value.toLowerCase())
+      );
+    });
+    
+
     return{
       CraftStore,
       getCategoryName,
       categories,
-      searchStore
+      searchStore,
+      selectedCategory,
+      handleCategoryClick,
+      filteredCraftStore
     }
   }
 });

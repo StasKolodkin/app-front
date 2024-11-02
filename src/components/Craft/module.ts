@@ -12,15 +12,27 @@ const Craft: Module<Craft, unknown> = ({
     craftStore: [
       {
         id: 0,
-        name: "Assault Rifle MK2",
+        name: "Assault Rifle MK3",
         category: CategoryList.rifle,
-        subValue: 7.62
+        subValue: 7.62,
+        weightAmount: 2.90,
+        materialsAmount: 430
+      },
+      {
+        id: 3,
+        name: "Assault Rifle MK2",
+        category: CategoryList.glock,
+        subValue: 7.62,
+        weightAmount: 2.40,
+        materialsAmount: 80
       },
       {
         id: 1,
         name: "Assault Rifle MK2",
         category: CategoryList.rifle,
-        subValue: 7.64
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
       },
     ],
     craftHistory: [

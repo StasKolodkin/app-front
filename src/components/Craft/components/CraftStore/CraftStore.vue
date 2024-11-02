@@ -5,7 +5,9 @@
   <div class="CraftStore">
     <div class="rosterStore">
       <div class="listCategory">
-        <div class="cellCategory" v-for="(category, index) in categories" :key="index">
+        <div class="cellCategory" v-for="(category, index) in categories" :key="index"
+          :class="{ selected: selectedCategory === index }" @click="handleCategoryClick(index)"
+        >
           <img :src="category.icon">
           <span>{{ category.name }}</span>
         </div>
@@ -19,7 +21,7 @@
         </div>
       </div>
       <div class="listItems">
-        <div class="cellItem" v-for="item in CraftStore" :key="item.id">
+        <div class="cellItem" v-for="item in filteredCraftStore" :key="item.id">
           <div class="topCellItem">
             <div class="leftTopCellItem">
               <span id="category">{{ getCategoryName(item.category) }}</span>
@@ -30,8 +32,20 @@
               <span id="quantity">{{ item.subValue }}</span>
             </div>
           </div>
+          <div class="midCellItem">
+            <img :src="images['AssaultRifle']">
+          </div>
           <div class="bottomCellItem">
-            <div class="leftBottomCellItem"></div>
+            <div class="leftBottomCellItem">
+              <div class="weightQuantity">
+                <img :src="svg['iconWeight']">
+                <span>{{ item.weightAmount }}</span>
+              </div>
+              <div class="materialsQuantity">
+                <img :src="svg['iconMaterials']">
+                <span>{{ item.materialsAmount }}</span>
+              </div>
+            </div>
             <div class="rightBottomCellItem">
               <div class="iconCartBlock">
                 <img :src="svg['iconCart']">
@@ -43,7 +57,7 @@
       </div>
     </div>
     <div class="cartStore">
-      <CartStore/>
+      <CraftCart/>
     </div>
   </div>
 </template>

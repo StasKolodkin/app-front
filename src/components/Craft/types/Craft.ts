@@ -17,6 +17,8 @@ export type CraftStore = {
   name: string
   category: CategoryList
   subValue: number
+  weightAmount: number
+  materialsAmount: number
 }
 
 export type CraftHistory = {
