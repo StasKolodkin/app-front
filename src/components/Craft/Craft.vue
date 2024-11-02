@@ -13,7 +13,7 @@
                 <span>Крафт предметов</span>
               </div>
               <div class="subTitle">
-                <span>Los Santos Police Department</span>
+                <span>{{ CraftData.department }}</span>
               </div>
             </div>
           </div>
@@ -38,11 +38,11 @@
           <div class="balanceBlock">
             <div class="weightBalance">
               <img :src="svg['iconWeight']">
-              <span>2.00</span>
+              <span>{{ CraftData.weight }}</span>
             </div>
             <div class="materialsBalance">
               <img :src="svg['iconMaterials']">
-              <span>300</span>
+              <span>{{ CraftData.materials }}</span>
             </div>
           </div>
         </div>
