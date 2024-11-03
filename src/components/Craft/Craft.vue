@@ -20,7 +20,7 @@
           <div class="switchButtonsBlock">
             <div class="switchButton" :class="{ active: isCrashStoreVisible }" @click="toggleView(true)">
               <div class="iconSwitchButton">
-                <img :src="svg['iconCraftStore']">
+                <img src="./assets/svg/iconCraftStore.svg">
               </div>
               <div class="textSwitchButton">
                 <span>Крафт</span>
@@ -28,7 +28,7 @@
             </div>
             <div class="switchButton" :class="{ active: !isCrashStoreVisible }" @click="toggleView(false)">
               <div class="iconSwitchButton">
-                <img :src="svg['iconCraftHistory']">
+                <img src="./assets/svg/iconCraftHistory.svg">
               </div>
               <div class="textSwitchButton">
                 <span>История</span>
@@ -37,17 +37,17 @@
           </div>
           <div class="balanceBlock">
             <div class="weightBalance">
-              <img :src="svg['iconWeight']">
+              <img src="./assets/svg/iconWeight.svg">
               <span>{{ CraftData.weight }}</span>
             </div>
             <div class="materialsBalance">
-              <img :src="svg['iconMaterials']">
+              <img src="./assets/svg/iconMaterials.svg">
               <span>{{ CraftData.materials }}</span>
             </div>
           </div>
         </div>
         <div class="rightPart" @click="exitCraft">
-          <img :src="svg['iconExit']">
+          <img src="./assets/svg/iconExit.svg">
           <span>Выход</span>
         </div>
       </div>

@@ -5,7 +5,7 @@
   <div class="CraftHistory">
     <div class="searchHistory">
       <div class="iconSearch">
-          <img :src="svg['iconSearch']">
+          <img src="../../assets/svg/iconSearch.svg">
         </div>
         <div class="strokeSearch">
           <input v-model="searchHistory" type="text" placeholder="Поиск" style="width: 100%">

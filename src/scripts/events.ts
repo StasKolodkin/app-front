@@ -1,4 +1,5 @@
 import { App, Plugin } from "vue";
+import "../components/Craft/events";
 
 const events: Plugin = {
   install(app: App) {
@@ -22,9 +23,8 @@ const events: Plugin = {
       };
     }
 
-    window.bsurl = process.env.NODE_ENV === "production" ? "/Main" : "";
+    window.bsurl = import.meta.env.MODE === "production" ? "/Main" : "";
     
-    require("../components/Craft/events");
   }
 };
 

@@ -15,7 +15,7 @@
       </div>
       <div class="search">
         <div class="iconSearch">
-          <img :src="svg['iconSearch']">
+          <img src="../../assets/svg/iconSearch.svg">
         </div>
         <div class="strokeSearch">
           <input v-model="searchStore" type="text" placeholder="Поиск" style="width: 100%">
@@ -40,11 +40,11 @@
           <div class="bottomCellItem">
             <div class="leftBottomCellItem">
               <div class="weightQuantity">
-                <img :src="svg['iconWeight']">
+                <img src="../../assets/svg/iconWeight.svg">
                 <span>{{ item.weightAmount }}</span>
               </div>
               <div class="materialsQuantity">
-                <img :src="svg['iconMaterials']">
+                <img src="../../assets/svg/iconMaterials.svg">
                 <span>{{ item.materialsAmount }}</span>
               </div>
             </div>
@@ -52,7 +52,8 @@
               @mouseenter="handleMouseEnterItem(item.uid)" @mouseleave="handleMouseLeaveItem"
             >
               <div class="iconCartBlock">
-                <img :src="isInCart(item.uid) || hoveredItem === item.uid ? svg['iconCart'] : svg['iconCartActive']">
+                <img src="../../assets/svg/iconCart.svg" v-if="isInCart(item.uid) || hoveredItem === item.uid">
+                <img src="../../assets/svg/iconCartActive.svg" v-else>
               </div>
               <div class="textCartBlock">
                 <span>{{ isInCart(item.uid) ? 'В корзине' : 'В корзину' }}</span>
@@ -63,7 +64,7 @@
       </div>
     </div>
     <div class="cartStore">
-      <CraftCart :cart-items="CartArray" @removeItem="removeCartItem" @emptyCart="emptyCart"/>
+      <CraftCart :cartItems="CartArray" @removeItem="removeCartItem" @emptyCart="emptyCart"/>
     </div>
   </div>
 </template>

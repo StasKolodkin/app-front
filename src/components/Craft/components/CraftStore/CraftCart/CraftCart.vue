@@ -7,11 +7,11 @@
       <span>Корзина</span>
       <div class="totalAmount">
         <div class="totalWeight">
-          <img :src="svg['iconWeight']">
+          <img src="../../../assets/svg/iconWeight.svg">
           <span>{{ totalWeight }}</span>
         </div>
         <div class="totalMaterials">
-          <img :src="svg['iconMaterials']">
+          <img src="../../../assets/svg/iconMaterials.svg">
           <span>{{ totalMaterials }}</span>
         </div>
       </div>
@@ -30,23 +30,25 @@
     <div class="bottomcellCart">
       <div class="leftBottomcellCart">
         <div class="weightQuantity">
-          <img :src="svg['iconWeight']">
+          <img src="../../../assets/svg/iconWeight.svg">
           <span>{{ cartItem.weight }}</span>
         </div>
         <div class="materialsQuantity">
-          <img :src="svg['iconMaterials']">
+          <img src="../../../assets/svg/iconMaterials.svg">
           <span>{{ cartItem.materials }}</span>
         </div>
       </div>
       <div class="rightBottomcellCart">
         <div class="leftArrowButton" @click="decreaseQuantity(cartItem)" @mouseenter="handleMouseEnterLeftArrow" @mouseleave="handleMouseLeaveArrow">
-          <img :src="isLeftArrow ? svg['iconLeftArrowActive'] : svg['iconLeftArrow'] ">
+          <img src="../../../assets/svg/iconLeftArrowActive.svg" v-if="isLeftArrow">
+          <img src="../../../assets/svg/iconLeftArrow.svg" v-else>
         </div>
         <div class="inputQuantity">
           <input v-model.number="cartItem.quantity" @input="handleInputQuantityChange(cartItem)" @keydown="preventNonInteger" type="number" style="width: 100%">
         </div>
         <div class="rightArrowButton" @click="increaseQuantity(cartItem)" @mouseenter="handleMouseEnterRightArrow" @mouseleave="handleMouseLeaveArrow">
-          <img :src="isRightArrow ? svg['iconRightArrowActive'] : svg['iconRightArrow'] ">
+          <img src="../../../assets/svg/iconRightArrowActive.svg" v-if="isRightArrow">
+          <img src="../../../assets/svg/iconRightArrow.svg" v-else>
         </div>
       </div>
     </div>

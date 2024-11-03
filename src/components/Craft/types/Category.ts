@@ -13,35 +13,48 @@ export type Property = {
   iconActive: string
 }
 
+import equipmentIcon from "../assets/svg/equipment.svg";
+import equipmentIconActive from "../assets/svg/equipmentActive.svg";
+import glockIcon from "../assets/svg/glock.svg";
+import glockIconActive from "../assets/svg/glockActive.svg";
+import rifleIcon from "../assets/svg/rifle.svg";
+import rifleIconActive from "../assets/svg/rifleActive.svg";
+import shotgunIcon from "../assets/svg/shotgun.svg";
+import shotgunIconActive from "../assets/svg/shotgunActive.svg";
+import ammoIcon from "../assets/svg/ammo.svg";
+import ammoIconActive from "../assets/svg/ammoActive.svg";
+import edgedWeaponIcon from "../assets/svg/edgedWeapon.svg";
+import edgedWeaponIconActive from "../assets/svg/edgedWeaponActive.svg";
+
 export const CategoryProperty: Record<CategoryList, Property> = {
   [CategoryList.equipment]: {
     name: "Снаряжение",
-    icon: require("../assets/svg/equipment.svg"),
-    iconActive: require("../assets/svg/equipmentActive.svg")
+    icon: equipmentIcon,
+    iconActive: equipmentIconActive,
   },
   [CategoryList.glock]: {
     name: "Пистолеты",
-    icon: require("../assets/svg/glock.svg"),
-    iconActive: require("../assets/svg/glockActive.svg")
+    icon: glockIcon,
+    iconActive: glockIconActive,
   },
   [CategoryList.rifle]: {
     name: "Автоматы",
-    icon: require("../assets/svg/rifle.svg"),
-    iconActive: require("../assets/svg/rifleActive.svg")
+    icon: rifleIcon,
+    iconActive: rifleIconActive,
   },
   [CategoryList.shotgun]: {
     name: "Дробовики",
-    icon: require("../assets/svg/shotgun.svg"),
-    iconActive: require("../assets/svg/shotgunActive.svg")
+    icon: shotgunIcon,
+    iconActive: shotgunIconActive,
   },
   [CategoryList.ammo]: {
     name: "Патроны",
-    icon: require("../assets/svg/ammo.svg"),
-    iconActive: require("../assets/svg/ammoActive.svg")
+    icon: ammoIcon,
+    iconActive: ammoIconActive,
   },
   [CategoryList.edgedWeapon]: {
     name: "Холодное оружие",
-    icon: require("../assets/svg/edgedWeapon.svg"),
-    iconActive: require("../assets/svg/edgedWeaponActive.svg")
+    icon: edgedWeaponIcon,
+    iconActive: edgedWeaponIconActive,
   },
-}
+};

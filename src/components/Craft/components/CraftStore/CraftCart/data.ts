@@ -1,12 +1,8 @@
 import { computed, defineComponent, onMounted, ref, SetupContext  } from 'vue'
-import { ImagesImages } from '../../../../../tools/ImagesImages'
 import { useStore } from 'vuex'
 import { CraftStore } from '../../../types/Craft';
 import { CategoryList, CategoryProperty } from '../../../types/Category';
 import { Events } from '../../../events';
-
-const svg = ImagesImages(require.context('../../../assets/svg/', false, /\.(png|jpe?g|svg)$/));
-const images = ImagesImages(require.context('../../../assets/images/', false, /\.(png|jpe?g|svg)$/));
 
 export default defineComponent({
   props: {
@@ -18,8 +14,8 @@ export default defineComponent({
   emit: ['removeItem', 'emptyCart'],
   data(){
     return{
-      svg,
-      images
+      // svg,
+      // images
     }
   },
   setup(cartItems, { emit }: SetupContext){
@@ -114,7 +110,9 @@ export default defineComponent({
       if (itemsArray.length === 0) return;
 
       if (CraftData.value.weight > totalWeight.value || CraftData.value.materials > totalMaterials.value) {
-        window.mp.trigger(Events.MakingCrafting, itemsArray);
+        if (window.mp && window.mp.events) {
+          window.mp.trigger(Events.MakingCrafting, itemsArray);
+        }
         emptyCart(); //удалить
       } else {
         isFailure.value = true;
@@ -131,7 +129,9 @@ export default defineComponent({
     };
 
     onMounted(() => {
-      window.mp.events.add(Events.EmptyCart, emptyCart);
+      if (window.mp && window.mp.events) {
+        window.mp.events.add(Events.EmptyCart, emptyCart)
+      }
     })
     
     return{

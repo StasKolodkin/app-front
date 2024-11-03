@@ -1,22 +1,12 @@
 import { computed, defineComponent, ref } from 'vue'
-import { ImagesImages } from '../../../../tools/ImagesImages'
 import { useStore } from 'vuex'
 import { CategoryList, CategoryProperty } from '../../types/Category';
 import { Craft, CraftStore } from '../../types/Craft';
 import CraftCart from './CraftCart/CraftCart.vue';
 
-const svg = ImagesImages(require.context('../../assets/svg/', false, /\.(png|jpe?g|svg)$/));
-const images = ImagesImages(require.context('../../assets/images/', false, /\.(png|jpe?g|svg)$/));
-
 export default defineComponent({
   components: {
     CraftCart
-  },
-  data(){
-    return{
-      svg,
-      images, 
-    }
   },
   setup(){
     const store = useStore<Craft>();
