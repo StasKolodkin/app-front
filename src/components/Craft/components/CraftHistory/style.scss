@@ -103,7 +103,7 @@ $base: 1920;
       }
 
       .cellHistory{
-        height: pxToVw(72);
+        min-height: pxToVw(72);
         width: 100%;
         border-radius: pxToVw(8);
         background: rgba(29, 29, 38, 0.5);
