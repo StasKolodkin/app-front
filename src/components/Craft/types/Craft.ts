@@ -13,9 +13,11 @@ export type CraftData = {
 }
 
 export type CraftStore = {
+  uid: number
   id: number
   name: string
   category: CategoryList
+  image: string
   subValue: number
   weightAmount: number
   materialsAmount: number

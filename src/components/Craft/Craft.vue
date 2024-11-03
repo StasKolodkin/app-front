@@ -52,8 +52,8 @@
         </div>
       </div>
       <div class="body">
-        <CraftStore v-if="isCrashStoreVisible"/>
-        <CraftHistory v-if="!isCrashStoreVisible"/>
+        <CraftStore v-show="isCrashStoreVisible"/>
+        <CraftHistory v-show="!isCrashStoreVisible"/>
       </div>
     </div>
   </div>

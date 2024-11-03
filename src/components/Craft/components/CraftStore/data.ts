@@ -2,7 +2,7 @@ import { computed, defineComponent, ref } from 'vue'
 import { ImagesImages } from '../../../../tools/ImagesImages'
 import { useStore } from 'vuex'
 import { CategoryList, CategoryProperty } from '../../types/Category';
-import { Craft } from '../../types/Craft';
+import { Craft, CraftStore } from '../../types/Craft';
 import CraftCart from './CraftCart/CraftCart.vue';
 
 const svg = ImagesImages(require.context('../../assets/svg/', false, /\.(png|jpe?g|svg)$/));
@@ -20,11 +20,14 @@ export default defineComponent({
   },
   setup(){
     const store = useStore<Craft>();
-    const CraftStore = computed(() => store.getters.getCraftStore)
 
+    //category
     const getCategoryName = (category: CategoryList): string => {
       return CategoryProperty[category].name;
     };
+
+    //filter
+    const CraftStore = computed(() => store.getters.getCraftStore)
 
     const categories = Object.values(CategoryList)
       .filter(value => typeof value === 'string')
@@ -51,6 +54,29 @@ export default defineComponent({
         item.name.toLowerCase().includes(searchStore.value.toLowerCase())
       );
     });
+
+    //add to cart
+    const CartArray = ref<Array<{ id: number; uid: number; weight: number; materials: number; quantity: number }>>([]);
+
+    const handleCartClick = (item: CraftStore) => {
+      const itemIndex = CartArray.value.findIndex(cartItem => cartItem.uid === item.uid);
+      
+      if (itemIndex === -1) {
+        CartArray.value.push({
+          id: item.id,
+          uid: item.uid,
+          weight: item.weightAmount,
+          materials: item.materialsAmount,
+          quantity: 1 
+        });
+      } else {
+        CartArray.value.splice(itemIndex, 1);
+      }
+    };
+    
+    const isInCart = (uid: number) => {
+      return CartArray.value.some(cartItem => cartItem.uid === uid);
+    };
     
 
     return{
@@ -60,7 +86,10 @@ export default defineComponent({
       searchStore,
       selectedCategory,
       handleCategoryClick,
-      filteredCraftStore
+      filteredCraftStore,
+      CartArray,
+      handleCartClick,
+      isInCart
     }
   }
 });

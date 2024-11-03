@@ -3,7 +3,7 @@ export enum CategoryList {
   glock,
   rifle,
   shotgun,
-  bullets,
+  ammo,
   edgedWeapon
 }
 
@@ -29,7 +29,7 @@ export const CategoryProperty: Record<CategoryList, Property> = {
     name: "Дробовики",
     icon: require("../assets/svg/shotgun.svg")
   },
-  [CategoryList.bullets]: {
+  [CategoryList.ammo]: {
     name: "Патроны",
     icon: require("../assets/svg/bullets.svg")
   },

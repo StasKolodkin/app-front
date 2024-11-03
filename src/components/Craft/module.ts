@@ -11,25 +11,131 @@ const Craft: Module<Craft, unknown> = ({
     },
     craftStore: [
       {
+        uid: 5,
         id: 0,
-        name: "Assault Rifle MK3",
+        name: "M16",
         category: CategoryList.rifle,
-        subValue: 7.62,
+        image: "https://i.postimg.cc/fytT41jx/pngwing-com-6.png",
+        subValue: 7.56,
         weightAmount: 2.90,
         materialsAmount: 430
       },
       {
-        id: 3,
-        name: "Assault Rifle MK2",
-        category: CategoryList.glock,
-        subValue: 7.62,
-        weightAmount: 2.40,
-        materialsAmount: 80
-      },
-      {
+        uid: 2,
         id: 1,
         name: "Assault Rifle MK2",
         category: CategoryList.rifle,
+        image: "https://i.postimg.cc/9XsVs84B/Assault-Rifle.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 23,
+        id: 0,
+        name: "Shotgun",
+        category: CategoryList.shotgun,
+        image: "https://i.postimg.cc/R0tb6dCv/pngwing-com.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 1,
+        id: 1,
+        name: "Revolver",
+        category: CategoryList.glock,
+        image: "https://i.postimg.cc/59HdbBLN/pngwing-com-3.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 56,
+        id: 22,
+        name: "Police Bulletproof",
+        category: CategoryList.equipment,
+        image: "https://i.postimg.cc/ZnngwdzR/pngwing-com-11.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 66,
+        id: 1,
+        name: "Revolver",
+        category: CategoryList.ammo,
+        image: "https://i.postimg.cc/bdX4F5wV/pngwing-com-4.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 99,
+        id: 2,
+        name: "M1911",
+        category: CategoryList.glock,
+        image: "https://i.postimg.cc/85132WDD/pngwing-com-1.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 256,
+        id: 12,
+        name: "Bulletproof",
+        category: CategoryList.equipment,
+        image: "https://i.postimg.cc/tJmvLMCG/pngwing-com-5.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 24,
+        id: 12,
+        name: "AK47",
+        category: CategoryList.rifle,
+        image: "https://i.postimg.cc/1X1nHpq0/pngwing-com-9.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 34,
+        id: 12,
+        name: "Knife",
+        category: CategoryList.edgedWeapon,
+        image: "https://i.postimg.cc/rwYW52Zk/pngwing-com-7.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 80,
+        id: 12,
+        name: "Blood knife",
+        category: CategoryList.edgedWeapon,
+        image: "https://i.postimg.cc/KjrBTKwq/pngwing-com-8.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 20,
+        id: 3,
+        name: "Camouflage Bulletproof",
+        category: CategoryList.equipment,
+        image: "https://i.postimg.cc/2STC9nPd/pngwing-com-12.png",
+        subValue: 7.64,
+        weightAmount: 1.90,
+        materialsAmount: 300
+      },
+      {
+        uid: 77,
+        id: 3,
+        name: "Skull glock",
+        category: CategoryList.glock,
+        image: "https://i.postimg.cc/wvQ2DTtB/pngwing-com-10.png",
         subValue: 7.64,
         weightAmount: 1.90,
         materialsAmount: 300

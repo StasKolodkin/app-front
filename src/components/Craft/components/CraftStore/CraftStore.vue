@@ -21,19 +21,19 @@
         </div>
       </div>
       <div class="listItems">
-        <div class="cellItem" v-for="item in filteredCraftStore" :key="item.id">
+        <div class="cellItem" v-for="item in filteredCraftStore" :key="item.uid">
           <div class="topCellItem">
             <div class="leftTopCellItem">
               <span id="category">{{ getCategoryName(item.category) }}</span>
               <span id="name">{{ item.name }}</span>
             </div>
             <div class="rightTopCellItem">
-              <span id="type">Тип патрон</span>
+              <span id="type">Тип патронов</span>
               <span id="quantity">{{ item.subValue }}</span>
             </div>
           </div>
           <div class="midCellItem">
-            <img :src="images['AssaultRifle']">
+            <img :src="item.image">
           </div>
           <div class="bottomCellItem">
             <div class="leftBottomCellItem">
@@ -46,18 +46,18 @@
                 <span>{{ item.materialsAmount }}</span>
               </div>
             </div>
-            <div class="rightBottomCellItem">
+            <div class="rightBottomCellItem" :class="{ inCart: isInCart(item.uid) }" @click="handleCartClick(item)">
               <div class="iconCartBlock">
                 <img :src="svg['iconCart']">
               </div>
-              <span>В корзину</span>
+              <span>{{ isInCart(item.uid) ? 'В корзине' : 'В корзину' }}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="cartStore">
-      <CraftCart/>
+      <CraftCart :cart-items="CartArray" />
     </div>
   </div>
 </template>

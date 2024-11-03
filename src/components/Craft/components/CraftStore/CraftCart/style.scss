@@ -61,10 +61,59 @@ $base: 1920;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: background 0.2s ease, border 0.2s ease;
+
+      &:hover{
+        border: pxToVw(1) solid rgba(43, 46, 58, 0.55);
+        background: rgba(47, 47, 65, 0.5);
+      }
 
       .topcellCart{
         height: pxToVw(60);
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .leftTopCellCart{
+          width: pxToVw(150);
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+
+        .rightTopCellCart{
+          width: pxToVw(125);
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-items: flex-start;
+          gap: pxToVw(5);
+          justify-content: flex-start;
+
+          #category{
+            color: rgb(68, 68, 85);
+            font-family: "Gilroy";
+            font-size: pxToVw(8);
+            font-weight: 500;
+          }
+
+          #name{
+            color: rgb(255, 255, 255);
+            font-family: "Gilroy";
+            font-size: pxToVw(12);
+            font-weight: 500;
+          }
+        }
       }
 
       .bottomcellCart{
@@ -75,7 +124,52 @@ $base: 1920;
         align-items: center;
 
         .leftBottomcellCart{
+          width: pxToVw(120);
+          height: pxToVw(20);
+          display: flex;
+          flex-direction: row;
+          gap: pxToVw(10);
+          margin-left: pxToVw(20);
 
+          .weightQuantity{
+            width: pxToVw(55);
+            height: 100%;
+            display: flex;
+            gap: pxToVw(5);
+            align-items: center;
+
+            img{
+              width: pxToVw(13);
+              height: auto;
+            }
+
+            span{
+              color: rgb(255, 255, 255);
+              font-family: "Gilroy";
+              font-size: pxToVw(12);
+              font-weight: 600;
+            }
+          }
+
+          .materialsQuantity{
+            width: pxToVw(55);
+            height: 100%;
+            display: flex;
+            gap: pxToVw(5);
+            align-items: center;
+
+            img{
+              width: pxToVw(13);
+              height: auto;
+            }
+
+            span{
+              color: rgb(255, 255, 255);
+              font-family: "Gilroy";
+              font-size: pxToVw(12);
+              font-weight: 600;
+            }
+          }
         }
 
         .rightBottomcellCart{
@@ -91,6 +185,25 @@ $base: 1920;
             border: pxToVw(0.83) solid rgba(255, 255, 255, 0.03);
             border-radius: pxToVw(4.14);
             background: rgb(39, 39, 49);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease, border 0.2s ease;
+
+            &:hover{
+              border: pxToVw(0.83) solid rgba(255, 255, 255, 0.16);
+              background: rgb(48, 131, 255, 0.5);
+            }
+
+            &.active{
+              border: pxToVw(0.83) solid rgba(255, 255, 255, 0.15);
+              background: rgb(48, 131, 255);
+            }
+
+            img{
+              height: pxToVw(10);
+              width: pxToVw(5);
+            }
           }
 
           .inputQuantity{
@@ -123,6 +236,25 @@ $base: 1920;
             border: pxToVw(0.83) solid rgba(255, 255, 255, 0.03);
             border-radius: pxToVw(4.14);
             background: rgb(39, 39, 49);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease, border 0.2s ease;
+
+            &:hover{
+              border: pxToVw(0.83) solid rgba(255, 255, 255, 0.16);
+              background: rgb(48, 131, 255, 0.5);
+            }
+
+            &.active{
+              border: pxToVw(0.83) solid rgba(255, 255, 255, 0.15);
+              background: rgb(48, 131, 255);
+            }
+
+            img{
+              height: pxToVw(10);
+              width: pxToVw(5);
+            }
           }
         }
       }
