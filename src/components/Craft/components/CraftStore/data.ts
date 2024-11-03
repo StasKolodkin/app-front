@@ -94,10 +94,21 @@ export default defineComponent({
         CartArray.value.splice(itemIndex, 1);
       }
     };
+
+    const removeCartItem = (uid: number) => {
+      const index = CartArray.value.findIndex(item => item.uid === uid);
+      if (index !== -1) {
+        CartArray.value.splice(index, 1);
+      }
+    };
     
     const isInCart = (uid: number) => {
       return CartArray.value.some(cartItem => cartItem.uid === uid);
     };
+
+    const emptyCart = () => {
+      CartArray.value = [];
+    }
     
 
     return{
@@ -116,7 +127,9 @@ export default defineComponent({
       hoveredCategory,
       hoveredItem,
       handleMouseEnterItem,
-      handleMouseLeaveItem
+      handleMouseLeaveItem,
+      removeCartItem,
+      emptyCart
     }
   }
 });

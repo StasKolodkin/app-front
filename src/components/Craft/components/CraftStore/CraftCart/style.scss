@@ -25,6 +25,69 @@ $base: 1920;
       font-family: "Gilroy";
       font-size: pxToVw(24);
       font-weight: 700;
+      user-select: none;
+    }
+
+    .totalAmount{
+      width: pxToVw(200);
+      height: pxToVw(20);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: row;
+      gap: pxToVw(10);
+
+      .totalWeight{
+        min-width: pxToVw(55);
+        max-width: pxToVw(75);
+        height: 100%;
+        display: flex;
+        gap: pxToVw(5);
+        align-items: center;
+
+        img{
+          width: pxToVw(13);
+          height: auto;
+        }
+
+        span{
+          color: rgb(255, 255, 255);
+          font-family: "Gilroy";
+          font-size: pxToVw(12);
+          font-weight: 600;
+          user-select: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          user-select: none;
+        }
+      }
+
+      .totalMaterials{
+        min-width: pxToVw(55);
+        max-width: pxToVw(75);
+        height: 100%;
+        display: flex;
+        gap: pxToVw(5);
+        align-items: center;
+
+        img{
+          width: pxToVw(13);
+          height: auto;
+        }
+
+        span{
+          color: rgb(255, 255, 255);
+          font-family: "Gilroy";
+          font-size: pxToVw(12);
+          font-weight: 600;
+          user-select: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          user-select: none;
+        }
+      }
     }
   }
 
@@ -148,6 +211,11 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(12);
               font-weight: 600;
+              user-select: none;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              user-select: none;
             }
           }
 
@@ -168,6 +236,11 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(12);
               font-weight: 600;
+              user-select: none;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              user-select: none;
             }
           }
         }
@@ -226,6 +299,15 @@ $base: 1920;
               font-weight: 500;
               font-family: "Gilroy";
               color: rgb(255, 255, 255);
+              -webkit-appearance: none;
+              -moz-appearance: textfield;
+              appearance: textfield;
+              
+              &::-webkit-inner-spin-button,
+              &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
             }
           }
 
@@ -268,5 +350,27 @@ $base: 1920;
     border: pxToVw(1) solid rgba(255, 255, 255, 0.15);
     border-radius: pxToVw(8);
     background: rgb(48, 131, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, border 0.2s ease;
+
+    &:hover{
+      border: pxToVw(0.83) solid rgba(255, 255, 255, 0.16);
+      background: rgb(48, 131, 255, 0.5);
+    }
+
+    &.failure{
+      border: pxToVw(0.83) solid rgba(238, 31, 31, 0.16);
+      background: rgba(177, 24, 24, 0.5);
+    }
+
+    span{
+      color: rgb(255, 255, 255);
+      font-family: "Gilroy";
+      font-size: pxToVw(16);
+      font-weight: 600;
+      user-select: none;
+    }
   }
 }

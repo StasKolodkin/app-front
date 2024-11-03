@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="cartStore">
-      <CraftCart :cart-items="CartArray" />
+      <CraftCart :cart-items="CartArray" @removeItem="removeCartItem" @emptyCart="emptyCart"/>
     </div>
   </div>
 </template>

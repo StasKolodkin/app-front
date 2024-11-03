@@ -5,7 +5,16 @@
   <div class="CraftCart">
     <div class="headerCart">
       <span>Корзина</span>
-      
+      <div class="totalAmount">
+        <div class="totalWeight">
+          <img :src="svg['iconWeight']">
+          <span>{{ totalWeight }}</span>
+        </div>
+        <div class="totalMaterials">
+          <img :src="svg['iconMaterials']">
+          <span>{{ totalMaterials }}</span>
+        </div>
+      </div>
     </div>
     <div class="listCart">
       <div class="cellCart" v-for="cartItem in cartItems" :key="cartItem.uid">
@@ -30,20 +39,22 @@
         </div>
       </div>
       <div class="rightBottomcellCart">
-        <div class="leftArrowButton">
-          <img :src="svg['iconLeftArrow']">
+        <div class="leftArrowButton" @click="decreaseQuantity(cartItem)" @mouseenter="handleMouseEnterLeftArrow" @mouseleave="handleMouseLeaveArrow">
+          <img :src="isLeftArrow ? svg['iconLeftArrowActive'] : svg['iconLeftArrow'] ">
         </div>
         <div class="inputQuantity">
-          <input v-model="cartItem.quantity" type="text" style="width: 100%">
+          <input v-model.number="cartItem.quantity" @input="handleInputQuantityChange(cartItem)" @keydown="preventNonInteger" type="number" style="width: 100%">
         </div>
-        <div class="rightArrowButton">
-          <img :src="svg['iconRightArrow']">
+        <div class="rightArrowButton" @click="increaseQuantity(cartItem)" @mouseenter="handleMouseEnterRightArrow" @mouseleave="handleMouseLeaveArrow">
+          <img :src="isRightArrow ? svg['iconRightArrowActive'] : svg['iconRightArrow'] ">
         </div>
       </div>
     </div>
   </div>
     </div>
-    <div class="buttonCart" @click="tryCrafting">
+    <div class="buttonCart" @click="tryCrafting" :class="{ failure: isFailure }">
+      <span v-if="!isFailure">Создать</span>
+      <span v-if="isFailure">Недостаточно средств</span>
     </div>
   </div>
 </template>

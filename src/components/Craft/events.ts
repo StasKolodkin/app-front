@@ -5,7 +5,7 @@ import { CraftData, CraftHistory, CraftStore } from "./types/Craft";
 export enum Events {
   MakingCrafting = "CEF:SERVER:Craft:MakingCrafting",
   EmptyCart = "CEF:SERVER:Craft:EmptyCart",
-  ExitCraft = "CEF:SERVER:Craft:ExitCraft"
+  ExitCraft = "CEF:SERVER:Craft:ExitCraft",
 }
 
 window.mp.events.add("CEF:SERVER:Craft:Show", () => {
