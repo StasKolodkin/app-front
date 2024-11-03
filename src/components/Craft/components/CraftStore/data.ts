@@ -26,6 +26,27 @@ export default defineComponent({
       return CategoryProperty[category].name;
     };
 
+    //styles
+    const hoveredCategory = ref<number | null>(null);
+
+    const handleMouseEnter = (index: number) => {
+      hoveredCategory.value = index;
+    };
+
+    const handleMouseLeave = () => {
+      hoveredCategory.value = null;
+    };
+
+    const hoveredItem = ref<number | null>(null);
+
+    const handleMouseEnterItem = (index: number) => {
+      hoveredItem.value = index;
+    };
+
+    const handleMouseLeaveItem = () => {
+      hoveredItem.value = null;
+    };
+
     //filter
     const CraftStore = computed(() => store.getters.getCraftStore)
 
@@ -89,7 +110,13 @@ export default defineComponent({
       filteredCraftStore,
       CartArray,
       handleCartClick,
-      isInCart
+      isInCart,
+      handleMouseLeave,
+      handleMouseEnter,
+      hoveredCategory,
+      hoveredItem,
+      handleMouseEnterItem,
+      handleMouseLeaveItem
     }
   }
 });

@@ -7,7 +7,7 @@
       <div class="header">
         <div class="leftPart">
           <div class="headlineBlock">
-            <img :src="images['logoLSPD']">
+            <img :src="CraftData.departmentLogo">
             <div class="titles">
               <div class="mainTitle">
                 <span>Крафт предметов</span>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="rightPart">
+        <div class="rightPart" @click="exitCraft">
           <img :src="svg['iconExit']">
           <span>Выход</span>
         </div>

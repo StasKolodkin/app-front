@@ -11,7 +11,6 @@
       <div class="cellCart" v-for="cartItem in cartItems" :key="cartItem.uid">
     <div class="topcellCart">
       <div class="leftTopCellCart">
-        <!-- <img :src="images['AssaultRifle']"> -->
         <img :src="getCraftItemById(cartItem.uid)?.image">
       </div>
       <div class="rightTopCellCart">
@@ -44,7 +43,7 @@
     </div>
   </div>
     </div>
-    <div class="buttonCart">
+    <div class="buttonCart" @click="tryCrafting">
     </div>
   </div>
 </template>

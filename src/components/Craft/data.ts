@@ -4,6 +4,7 @@ import { useStore } from 'vuex'
 import CraftStore from './components/CraftStore/CraftStore.vue'
 import CraftHistory from './components/CraftHistory/CraftHistory.vue'
 import { Craft } from './types/Craft'
+import { Events } from './events'
 
 const svg = ImagesImages(require.context('./assets/svg/', false, /\.(png|jpe?g|svg)$/));
 const images = ImagesImages(require.context('./assets/images/', false, /\.(png|jpe?g|svg)$/));
@@ -28,10 +29,15 @@ export default defineComponent({
       isCrashStoreVisible.value = value;
     };
 
+    const exitCraft =() => {
+      window.mp.trigger(Events.ExitCraft)
+    }
+
     return{
       isCrashStoreVisible,
       toggleView,
-      CraftData
+      CraftData,
+      exitCraft
     }
   }
 });

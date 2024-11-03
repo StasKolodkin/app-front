@@ -7,8 +7,9 @@
       <div class="listCategory">
         <div class="cellCategory" v-for="(category, index) in categories" :key="index"
           :class="{ selected: selectedCategory === index }" @click="handleCategoryClick(index)"
+          @mouseenter="handleMouseEnter(index)" @mouseleave="handleMouseLeave"
         >
-          <img :src="category.icon">
+          <img :src="selectedCategory === index || hoveredCategory === index ? category.iconActive : category.icon">
           <span>{{ category.name }}</span>
         </div>
       </div>
@@ -27,8 +28,9 @@
               <span id="category">{{ getCategoryName(item.category) }}</span>
               <span id="name">{{ item.name }}</span>
             </div>
-            <div class="rightTopCellItem">
-              <span id="type">Тип патронов</span>
+            <div class="rightTopCellItem" v-if="item.subValue">
+              <span id="type" v-if="item.category == 4">Кол-во патронов</span>
+              <span id="type" v-else>Тип патронов</span>
               <span id="quantity">{{ item.subValue }}</span>
             </div>
           </div>
@@ -46,11 +48,15 @@
                 <span>{{ item.materialsAmount }}</span>
               </div>
             </div>
-            <div class="rightBottomCellItem" :class="{ inCart: isInCart(item.uid) }" @click="handleCartClick(item)">
+            <div class="rightBottomCellItem" :class="{ inCart: isInCart(item.uid) }" @click="handleCartClick(item)"
+              @mouseenter="handleMouseEnterItem(item.uid)" @mouseleave="handleMouseLeaveItem"
+            >
               <div class="iconCartBlock">
-                <img :src="svg['iconCart']">
+                <img :src="isInCart(item.uid) || hoveredItem === item.uid ? svg['iconCart'] : svg['iconCartActive']">
               </div>
-              <span>{{ isInCart(item.uid) ? 'В корзине' : 'В корзину' }}</span>
+              <div class="textCartBlock">
+                <span>{{ isInCart(item.uid) ? 'В корзине' : 'В корзину' }}</span>
+              </div>
             </div>
           </div>
         </div>

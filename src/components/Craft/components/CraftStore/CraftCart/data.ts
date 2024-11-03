@@ -20,7 +20,7 @@ export default defineComponent({
       images
     }
   },
-  setup(){
+  setup(cartItems){
     const store = useStore();
 
     const getCraftItemById = (uid: number) => {
@@ -30,10 +30,15 @@ export default defineComponent({
     const getCategoryName = (category: CategoryList): string => {
       return CategoryProperty[category].name;
     };
+
+    const tryCrafting = () => {
+      console.log(cartItems)
+    }
     
     return{
       getCraftItemById,
-      getCategoryName
+      getCategoryName,
+      tryCrafting
     }
   }
 });

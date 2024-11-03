@@ -68,6 +68,7 @@ $base: 1920;
           font-family: "Gilroy";
           font-size: pxToVw(14);
           font-weight: 500;
+          user-select: none;
         }
       }
     }
@@ -180,6 +181,7 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(10);
               font-weight: 500;
+              user-select: none;
             }
 
             #name{
@@ -187,6 +189,7 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(14);
               font-weight: 500;
+              user-select: none;
             }
           }
 
@@ -203,6 +206,7 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(10);
               font-weight: 500;
+              user-select: none;
             }
 
             #quantity{
@@ -210,6 +214,7 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(14);
               font-weight: 500;
+              user-select: none;
             }
           }
         }
@@ -261,6 +266,7 @@ $base: 1920;
                 font-family: "Gilroy";
                 font-size: pxToVw(12);
                 font-weight: 600;
+                user-select: none;
               }
             }
 
@@ -281,6 +287,7 @@ $base: 1920;
                 font-family: "Gilroy";
                 font-size: pxToVw(12);
                 font-weight: 600;
+                user-select: none;
               }
             }
           }
@@ -291,7 +298,7 @@ $base: 1920;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: pxToVw(8);
+            gap: pxToVw(4);
             box-sizing: border-box;
             border: pxToVw(1) solid rgba(255, 255, 255, 0.03);
             border-radius: pxToVw(4);
@@ -301,11 +308,25 @@ $base: 1920;
             &:hover{
               border: pxToVw(1) solid rgba(255, 255, 255, 0.16);
               background: rgb(48, 131, 255, 0.5);
+
+              .textCartBlock{
+
+                span{
+                  color: rgb(255, 255, 255);
+                }
+              }
             }
 
             &.inCart{
               border: pxToVw(1) solid rgba(255, 255, 255, 0.15);
               background: rgb(48, 131, 255);
+
+              .textCartBlock{
+
+                span{
+                  color: rgb(255, 255, 255);
+                }
+              }
             }
 
             .iconCartBlock{
@@ -321,11 +342,19 @@ $base: 1920;
               }
             }
 
-            span{
-              color: rgb(255, 255, 255);
-              font-family: "Gilroy";
-              font-size: pxToVw(12);
-              font-weight: 600;
+            .textCartBlock{
+              width: pxToVw(65);
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+
+              span{
+                color: rgb(96, 96, 115);
+                font-family: "Gilroy";
+                font-size: pxToVw(12);
+                font-weight: 600;
+                user-select: none;
+              }
             }
           }
         }

@@ -85,6 +85,7 @@ $base: 1920;
           font-family: "Gilroy";
           font-size: pxToVw(14);
           font-weight: 500;
+          user-select: none;
         }
       }
     }
@@ -124,6 +125,8 @@ $base: 1920;
             display: flex;
             align-items: center;
             justify-content: center;
+            border-radius: pxToVw(5);
+            overflow: hidden;
 
             img{
               width: 100%;
@@ -143,6 +146,7 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(16);
               font-weight: 600;
+              user-select: none;
             }
           }
         }
@@ -159,6 +163,7 @@ $base: 1920;
             font-family: "Gilroy";
             font-size: pxToVw(16);
             font-weight: 600;
+            user-select: none;
           }
         }
 
@@ -174,6 +179,7 @@ $base: 1920;
             font-family: "Gilroy";
             font-size: pxToVw(16);
             font-weight: 600;
+            user-select: none;
           }
         }
 
@@ -183,12 +189,17 @@ $base: 1920;
           display: flex;
           align-items: center;
           justify-content: flex-start;
+          overflow: hidden;
 
           span{
             color: rgb(254, 254, 254);
             font-family: "Gilroy";
             font-size: pxToVw(16);
             font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            user-select: none;
           }
         }
       }

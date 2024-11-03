@@ -22,7 +22,7 @@
         <div class="cellHistory" v-for="(item, index) in filteredCraftHistory" :key="index" :style="{ background: index % 2 === 0 ? 'rgba(29, 29, 38, 0.5)' : 'transparent' }">
           <div class="cellPlayer">
             <div class="cellImage">
-              <img :src="images['prof']">
+              <img :src="item.image">
             </div>
             <div class="cellName"><span>{{ item.name }}</span></div>
           </div>

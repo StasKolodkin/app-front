@@ -5,6 +5,7 @@ import { CategoryList } from "./types/Category";
 const Craft: Module<Craft, unknown> = ({
   state: {
     craftData: {
+      departmentLogo: "https://i.postimg.cc/bJZhY4Wv/logoLSPD.png",
       department: "Los Santos Police Department",
       materials: 450,
       weight: 2.90,
@@ -56,17 +57,16 @@ const Craft: Module<Craft, unknown> = ({
         name: "Police Bulletproof",
         category: CategoryList.equipment,
         image: "https://i.postimg.cc/ZnngwdzR/pngwing-com-11.png",
-        subValue: 7.64,
         weightAmount: 1.90,
         materialsAmount: 300
       },
       {
         uid: 66,
         id: 1,
-        name: "Revolver",
+        name: "Bullets",
         category: CategoryList.ammo,
         image: "https://i.postimg.cc/bdX4F5wV/pngwing-com-4.png",
-        subValue: 7.64,
+        subValue: 500,
         weightAmount: 1.90,
         materialsAmount: 300
       },
@@ -86,7 +86,6 @@ const Craft: Module<Craft, unknown> = ({
         name: "Bulletproof",
         category: CategoryList.equipment,
         image: "https://i.postimg.cc/tJmvLMCG/pngwing-com-5.png",
-        subValue: 7.64,
         weightAmount: 1.90,
         materialsAmount: 300
       },
@@ -106,7 +105,6 @@ const Craft: Module<Craft, unknown> = ({
         name: "Knife",
         category: CategoryList.edgedWeapon,
         image: "https://i.postimg.cc/rwYW52Zk/pngwing-com-7.png",
-        subValue: 7.64,
         weightAmount: 1.90,
         materialsAmount: 300
       },
@@ -116,7 +114,6 @@ const Craft: Module<Craft, unknown> = ({
         name: "Blood knife",
         category: CategoryList.edgedWeapon,
         image: "https://i.postimg.cc/KjrBTKwq/pngwing-com-8.png",
-        subValue: 7.64,
         weightAmount: 1.90,
         materialsAmount: 300
       },
@@ -126,7 +123,6 @@ const Craft: Module<Craft, unknown> = ({
         name: "Camouflage Bulletproof",
         category: CategoryList.equipment,
         image: "https://i.postimg.cc/2STC9nPd/pngwing-com-12.png",
-        subValue: 7.64,
         weightAmount: 1.90,
         materialsAmount: 300
       },
@@ -144,22 +140,116 @@ const Craft: Module<Craft, unknown> = ({
     craftHistory: [
       {
         name: "Source Insensitive",
+        image: "https://i.postimg.cc/rs8YFPfH/6e0bfb93176cabbc4c395ae524ec1d2d.jpg",
         date: "20.02.2020, 12:00",
         quantity: 702,
         listItem: ["Assault Rifle MK2", "Revolver", "Sniper Rifle"]
       },
       {
         name: "Stas",
+        image: "https://i.postimg.cc/8kjKp9Bq/5cbea638934c3a0181790c16a7832179.jpg",
         date: "23.06.2024, 11:40",
         quantity: 209,
         listItem: ["Assault Rifle MK2", "Revolver"]
       },
       {
         name: "EzeQel",
+        image: "https://i.postimg.cc/L6mJBKCW/ac6372c1d4752ea0dbe7c66671ef7465.jpg",
         date: "03.10.2023, 21:40",
         quantity: 590,
         listItem: ["Assault Rifle MK2", "Revolver", "Revolver"]
-      }
+      },
+      {
+        name: "Egor",
+        image: "https://i.postimg.cc/MG5PH8L8/42587.png",
+        date: "03.10.2019, 01:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver"]
+      },
+      {
+        name: "Source Insensitive",
+        image: "https://i.postimg.cc/rs8YFPfH/6e0bfb93176cabbc4c395ae524ec1d2d.jpg",
+        date: "20.02.2020, 12:00",
+        quantity: 702,
+        listItem: ["Assault Rifle MK2", "Revolver", "Sniper Rifle"]
+      },
+      {
+        name: "Stas",
+        image: "https://i.postimg.cc/8kjKp9Bq/5cbea638934c3a0181790c16a7832179.jpg",
+        date: "23.06.2024, 11:40",
+        quantity: 209,
+        listItem: ["Assault Rifle MK2", "Revolver"]
+      },
+      {
+        name: "EzeQel",
+        image: "https://i.postimg.cc/L6mJBKCW/ac6372c1d4752ea0dbe7c66671ef7465.jpg",
+        date: "03.10.2023, 21:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver"]
+      },
+      {
+        name: "Egor",
+        image: "https://i.postimg.cc/MG5PH8L8/42587.png",
+        date: "03.10.2019, 01:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver"]
+      },
+      {
+        name: "Source Insensitive",
+        image: "https://i.postimg.cc/rs8YFPfH/6e0bfb93176cabbc4c395ae524ec1d2d.jpg",
+        date: "20.02.2020, 12:00",
+        quantity: 702,
+        listItem: ["Assault Rifle MK2", "Revolver", "Sniper Rifle"]
+      },
+      {
+        name: "Stas",
+        image: "https://i.postimg.cc/8kjKp9Bq/5cbea638934c3a0181790c16a7832179.jpg",
+        date: "23.06.2024, 11:40",
+        quantity: 209,
+        listItem: ["Assault Rifle MK2", "Revolver"]
+      },
+      {
+        name: "EzeQel",
+        image: "https://i.postimg.cc/L6mJBKCW/ac6372c1d4752ea0dbe7c66671ef7465.jpg",
+        date: "03.10.2023, 21:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver"]
+      },
+      {
+        name: "Egor",
+        image: "https://i.postimg.cc/MG5PH8L8/42587.png",
+        date: "03.10.2019, 01:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver"]
+      },
+      {
+        name: "Source Insensitive",
+        image: "https://i.postimg.cc/rs8YFPfH/6e0bfb93176cabbc4c395ae524ec1d2d.jpg",
+        date: "20.02.2020, 12:00",
+        quantity: 702,
+        listItem: ["Assault Rifle MK2", "Revolver", "Sniper Rifle"]
+      },
+      {
+        name: "Stas",
+        image: "https://i.postimg.cc/8kjKp9Bq/5cbea638934c3a0181790c16a7832179.jpg",
+        date: "23.06.2024, 11:40",
+        quantity: 209,
+        listItem: ["Assault Rifle MK2", "Revolver"]
+      },
+      {
+        name: "EzeQel",
+        image: "https://i.postimg.cc/L6mJBKCW/ac6372c1d4752ea0dbe7c66671ef7465.jpg",
+        date: "03.10.2023, 21:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver"]
+      },
+      {
+        name: "Egor",
+        image: "https://i.postimg.cc/MG5PH8L8/42587.png",
+        date: "03.10.2019, 01:40",
+        quantity: 590,
+        listItem: ["Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver", "Assault Rifle MK2", "Revolver", "Revolver"]
+      },
     ]
   },
   getters: {

@@ -7,6 +7,7 @@ export type Craft = {
 }
 
 export type CraftData = {
+  departmentLogo: string
   department: string
   materials: number
   weight: number
@@ -18,13 +19,14 @@ export type CraftStore = {
   name: string
   category: CategoryList
   image: string
-  subValue: number
+  subValue?: number
   weightAmount: number
   materialsAmount: number
 }
 
 export type CraftHistory = {
   name: string
+  image: string
   date: string
   quantity: number
   listItem: string[]
