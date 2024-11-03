@@ -12,12 +12,6 @@ export default defineComponent({
     }
   },
   emit: ['removeItem', 'emptyCart'],
-  data(){
-    return{
-      // svg,
-      // images
-    }
-  },
   setup(cartItems, { emit }: SetupContext){
     const store = useStore();
 
@@ -113,7 +107,7 @@ export default defineComponent({
         if (window.mp && window.mp.events) {
           window.mp.trigger(Events.MakingCrafting, itemsArray);
         }
-        emptyCart(); //удалить
+        // emptyCart(); 
       } else {
         isFailure.value = true;
         setTimeout(() => {
