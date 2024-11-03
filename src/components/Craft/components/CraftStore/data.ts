@@ -16,6 +16,14 @@ export default defineComponent({
       return CategoryProperty[category].name;
     };
 
+    const getIconPath = (icon: string) => {
+      return new URL(`../../assets/svg/${icon}.svg`, import.meta.url).href;
+    };
+
+    const getIconActivePath = (icon: string) => {
+      return new URL(`../../assets/svg/${icon}Active.svg`, import.meta.url).href;
+    };
+
     //styles
     const hoveredCategory = ref<number | null>(null);
 
@@ -119,7 +127,9 @@ export default defineComponent({
       handleMouseEnterItem,
       handleMouseLeaveItem,
       removeCartItem,
-      emptyCart
+      emptyCart,
+      getIconPath,
+      getIconActivePath
     }
   }
 });

@@ -9,7 +9,8 @@
           :class="{ selected: selectedCategory === index }" @click="handleCategoryClick(index)"
           @mouseenter="handleMouseEnter(index)" @mouseleave="handleMouseLeave"
         >
-          <img :src="selectedCategory === index || hoveredCategory === index ? category.iconActive : category.icon">
+          <img :src="getIconActivePath(category.icon)" v-if="selectedCategory === index || hoveredCategory === index">
+          <img :src="getIconPath(category.icon)" v-else>
           <span>{{ category.name }}</span>
         </div>
       </div>
