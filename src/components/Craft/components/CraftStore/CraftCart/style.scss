@@ -25,7 +25,6 @@ $base: 1920;
       font-family: "Gilroy";
       font-size: pxToVw(24);
       font-weight: 700;
-      user-select: none;
     }
 
     .totalAmount{
@@ -55,11 +54,9 @@ $base: 1920;
           font-family: "Gilroy";
           font-size: pxToVw(12);
           font-weight: 600;
-          user-select: none;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          user-select: none;
         }
       }
 
@@ -81,11 +78,9 @@ $base: 1920;
           font-family: "Gilroy";
           font-size: pxToVw(12);
           font-weight: 600;
-          user-select: none;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          user-select: none;
         }
       }
     }
@@ -150,7 +145,6 @@ $base: 1920;
             height: 100%;
             object-fit: contain;
             object-position: center;
-            user-select: none;
           }
         }
 
@@ -169,7 +163,6 @@ $base: 1920;
             font-family: "Gilroy";
             font-size: pxToVw(8);
             font-weight: 500;
-            user-select: none;
           }
 
           #name{
@@ -177,7 +170,6 @@ $base: 1920;
             font-family: "Gilroy";
             font-size: pxToVw(12);
             font-weight: 500;
-            user-select: none;
           }
         }
       }
@@ -207,7 +199,6 @@ $base: 1920;
             img{
               width: pxToVw(13);
               height: auto;
-              user-select: none;
             }
 
             span{
@@ -215,11 +206,9 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(12);
               font-weight: 600;
-              user-select: none;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
-              user-select: none;
             }
           }
 
@@ -233,7 +222,6 @@ $base: 1920;
             img{
               width: pxToVw(13);
               height: auto;
-              user-select: none;
             }
 
             span{
@@ -241,11 +229,9 @@ $base: 1920;
               font-family: "Gilroy";
               font-size: pxToVw(12);
               font-weight: 600;
-              user-select: none;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
-              user-select: none;
             }
           }
         }
@@ -281,7 +267,6 @@ $base: 1920;
             img{
               height: pxToVw(10);
               width: pxToVw(5);
-              user-select: none;
             }
           }
 
@@ -342,7 +327,6 @@ $base: 1920;
             img{
               height: pxToVw(10);
               width: pxToVw(5);
-              user-select: none;
             }
           }
         }
@@ -377,7 +361,6 @@ $base: 1920;
       font-family: "Gilroy";
       font-size: pxToVw(16);
       font-weight: 600;
-      user-select: none;
     }
   }
 }
